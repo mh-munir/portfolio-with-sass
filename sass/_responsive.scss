@@ -1,0 +1,215 @@
+@media only screen and (max-width: 1200px) {
+    .mynav {
+        top: 1rem;
+        left: 4rem;
+        border-radius: 50%;
+        cursor: move;
+
+        .toggle__button {
+            display: block;
+            border: .1rem solid rgba($white-color, .1);
+            box-sizing: border-box;
+
+            &:active,
+            &:focus {
+                outline: none;
+                border-radius: 50%;
+            }
+        }
+
+        &--menu {
+            width: 7rem;
+            height: 55rem;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 99;
+            overflow: hidden;
+            transition: all .3s linear;
+
+            .menu__move {
+                display: none;
+            }
+        }
+
+        .mynav--menu--show {
+            height: 55rem;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .root__layout {
+        top: 0;
+        transform: translate(0);
+        height: 100vh !important;
+    }
+
+    .top__side__section {
+        width: 25% !important;
+        height: 100vh !important;
+    }
+
+    .all__section {
+        width: 74.9% !important;
+        height: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    .mynav {
+
+        &--menu {
+            li {
+                &:nth-child(2) {
+                    display: block !important;
+                }
+            }
+
+        }
+    }
+
+    .root__layout {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        transform: translateY(0%);
+
+        &::-webkit-scrollbar {
+            width: 0 !important;
+            border-radius: 1rem;
+        }
+
+        &::-webkit-scrollbar-track {
+            margin-top: 1.5rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $primary-color;
+            border-radius: 1rem;
+        }
+
+        .top__side__section {
+            position: relative;
+            width: 100% !important;
+            height: fit-content !important;
+            margin-bottom: .2rem;
+
+            .top__side__section--content {
+                width: 100%;
+                padding: 0rem !important;
+
+                margin {
+                    top: 2.5rem;
+                    bottom: 2.5rem;
+                }
+
+                height: 100%;
+            }
+        }
+
+        .all__section {
+            width: 100% !important;
+            height: 100vh !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 651px) {
+
+    .about__section {
+        &--details {
+            &--des {
+                column-count: 1 !important;
+                column-gap: 0;
+            }
+
+            &--info {
+                .info__list {
+                    &--item {
+                        &--label {
+                            width: 8rem !important;
+                        }
+                    }
+                }
+            }
+
+            .clone__style {
+                width: 2rem !important;
+            }
+        }
+    }
+
+    .resume__section {
+        .resume__container {
+
+            &--item {
+                flex-direction: column;
+                align-items: flex-start !important;
+
+                &--year {
+
+                    &::before {
+                        left: -.3rem;
+                        top: 100% !important;
+                        transform: translateY(-50%) !important;
+                    }
+
+                    &::after {
+                        left: 0%;
+                        top: 100% !important;
+                        transform: translateY(-50%) !important;
+                    }
+                }
+
+                &--details {
+                    padding-top: 2rem;
+                    margin-left: .5rem;
+                }
+            }
+        }
+
+    }
+
+    .service__section {
+        &--items {
+            &--item {
+                flex-basis: 100% !important;
+            }
+        }
+    }
+
+    .work__section {
+        &--items {
+            &--item {
+                flex-basis: 100% !important;
+            }
+        }
+    }
+
+    .blog__section {
+        &--items {
+            &--item {
+                flex-direction: column !important;
+
+                &--img {
+                    width: 100% !important;
+                    margin-bottom: 1.5rem;
+                }
+
+                &--details {
+                    width: 100% !important;
+                    min-height: 32rem !important;
+
+                    &--des {
+                        p {
+                            height: 24rem !important;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
